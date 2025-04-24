@@ -6,6 +6,7 @@ for lucky stun
 为此，先在阿里云域名解析增加了一条显性URL跳转，s2.xxx.com --> s1.xxx.com:1234。然后在lucky中，让stun每次穿透成功后调用脚本，改写上面这条跳转记录的端口号。这样http的应用就不用再手动改端口啦。
 
 下面是操作，需要有阿里域名账号，电脑和lucky镜像中要安装node.js。
+
 1.https://ram.console.aliyun.com/profile/access-key 查看accesskey 和secret。
 
 2.https://next.api.aliyun.com/api/Alidns/2015-01-09/DescribeSubDomainRecords?useCommon=true 
@@ -21,7 +22,7 @@ for lucky stun
 
 7.把/tool打包，传输到lucky目录下面，解压。进入lucky设置界面，stun下面找到web穿透条目，自定义脚本触发，
 /usr/bin/node /goodluck/dnstool01/src/client.js ${port} 
-也可以先在docker中手动先试验一下上面的命令，看看是否成功
+也可以先在docker中手动先试验一下上面的命令，看看是否成功。
 
 以上7步完成操作。感谢楼主，感谢AI，让我再次接入了公网。
 
