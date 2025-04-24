@@ -21,7 +21,9 @@ for lucky stun
 6.使用第1、2步的结果，修改client.js ，有两处需要修改的。改完存放到/src下面替换。
 
 7.把/tool打包，传输到lucky目录下面，解压。进入lucky设置界面，stun下面找到web穿透条目，自定义脚本触发，
+
 /usr/bin/node /goodluck/dnstool01/src/client.js ${port} 
+
 也可以先在docker中手动先试验一下上面的命令，看看是否成功。
 
 以上7步完成操作。感谢楼主，感谢AI，让我再次接入了公网。
